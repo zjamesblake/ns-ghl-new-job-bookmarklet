@@ -52,6 +52,15 @@
             font-size: 0.9em;
             color: #777;
         }
+        code {
+            background: #f5f5f5;
+            padding: 2px 5px;
+            border-radius: 3px;
+            font-family: monospace;
+            font-size: 0.9em;
+            overflow-wrap: break-word;
+            word-wrap: break-word;
+        }
     </style>
 </head>
 <body>
@@ -64,13 +73,14 @@
         <ol>
             <li>Make sure your browser's bookmarks bar is visible (View → Show Bookmarks Bar)</li>
             <li>Drag this link to your bookmarks bar: 
-                <a class="bookmarklet" href="javascript:(function(){var s=document.createElement('script');s.src='https://zjamesblake.github.io/ns-ghl-new-job-bookmarklet/ghl-bookmarklet.js';document.body.appendChild(s);})();">GHL Job Creator</a>
+                <a class="bookmarklet" href="javascript:(function(){if(document.getElementById('ghl-form-popup-overlay'))return;function e(){try{const e=document.querySelector('input[name=\"contact.first_name\"]')||document.querySelector('input[name=\"first_name\"]');const t=document.querySelector('input[name=\"contact.last_name\"]')||document.querySelector('input[name=\"last_name\"]');const n=document.querySelector('input[name=\"contact.email\"]')||document.querySelector('input[name=\"email\"]');let o=e?e.value.trim():'';let a=t?t.value.trim():'';let r=n?n.value.trim():'';if(!o||!a){const e=document.querySelector('.contact-header-info h1')||document.querySelector('.contact-name')||document.querySelector('.contact-info-name')||document.querySelector('h1.name');if(e){const t=e.textContent.trim().split(' ');t.length>=1&&!o&&(o=t[0]);t.length>=2&&!a&&(a=t.slice(1).join(' '))}}if(!r){const e=document.querySelector('.contact-header-info a[href^=\"mailto:\"]')||document.querySelector('a[href^=\"mailto:\"]')||document.querySelector('.contact-email');e&&(e.getAttribute('href')?r=e.getAttribute('href').replace('mailto:',''):r=e.textContent.trim())}console.log('Extracted data:',{firstName:o,lastName:a,email:r});return{firstName:o,lastName:a,email:r}}catch(e){console.error('Error extracting contact data:',e);return{firstName:'',lastName:'',email:''}}}const t=e();const n=new URL('https://api.leadconnectorhq.com/widget/form/rpBMjFJzdISFJTYMWgQV');t.firstName&&n.searchParams.append('first_name',t.firstName);t.lastName&&n.searchParams.append('last_name',t.lastName);t.email&&n.searchParams.append('email',t.email);const o=document.createElement('div');const s=`#ghl-form-popup-overlay{position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.7);z-index:9999;display:flex;justify-content:center;align-items:center;font-family:Arial,sans-serif}#ghl-form-popup-container{background:white;border-radius:8px;width:90%;max-width:800px;height:90%;max-height:800px;position:relative;box-shadow:0 4px 20px rgba(0,0,0,0.3);display:flex;flex-direction:column}#ghl-form-popup-header{padding:15px;border-bottom:1px solid #eee;display:flex;justify-content:space-between;align-items:center}#ghl-form-popup-title{font-size:18px;font-weight:bold;color:#333;margin:0}#ghl-form-popup-close{background:none;border:none;font-size:24px;cursor:pointer;color:#777}#ghl-form-iframe{flex:1;width:100%;border:none}`;o.innerHTML=`<div id=\"ghl-form-popup-overlay\"><style>${s}</style><div id=\"ghl-form-popup-container\"><div id=\"ghl-form-popup-header\"><h3 id=\"ghl-form-popup-title\">Create New Job</h3><button id=\"ghl-form-popup-close\" aria-label=\"Close\">&times;</button></div><iframe id=\"ghl-form-iframe\" src=\"${n.toString()}\" allow=\"geolocation\"></iframe></div></div>`;document.body.appendChild(o);document.getElementById('ghl-form-popup-close').addEventListener('click',function(){document.getElementById('ghl-form-popup-overlay').remove()});document.getElementById('ghl-form-popup-overlay').addEventListener('click',function(e){if(e.target===this)this.remove()})})();">GHL Job Creator</a>
             </li>
             <li>If dragging doesn't work, right-click your bookmarks bar, select "Add page" and:
                 <ul>
                     <li>Name: <strong>GHL Job Creator</strong></li>
-                    <li>URL: <code>javascript:(function(){var s=document.createElement('script');s.src='https://zjamesblake.github.io/ns-ghl-new-job-bookmarklet/ghl-bookmarklet.js';document.body.appendChild(s);})();</code></li>
+                    <li>URL: Copy and paste the code below</li>
                 </ul>
+                <code>javascript:(function(){if(document.getElementById('ghl-form-popup-overlay'))return;function e(){try{const e=document.querySelector('input[name=\"contact.first_name\"]')||document.querySelector('input[name=\"first_name\"]');const t=document.querySelector('input[name=\"contact.last_name\"]')||document.querySelector('input[name=\"last_name\"]');const n=document.querySelector('input[name=\"contact.email\"]')||document.querySelector('input[name=\"email\"]');let o=e?e.value.trim():'';let a=t?t.value.trim():'';let r=n?n.value.trim():'';if(!o||!a){const e=document.querySelector('.contact-header-info h1')||document.querySelector('.contact-name')||document.querySelector('.contact-info-name')||document.querySelector('h1.name');if(e){const t=e.textContent.trim().split(' ');t.length>=1&&!o&&(o=t[0]);t.length>=2&&!a&&(a=t.slice(1).join(' '))}}if(!r){const e=document.querySelector('.contact-header-info a[href^=\"mailto:\"]')||document.querySelector('a[href^=\"mailto:\"]')||document.querySelector('.contact-email');e&&(e.getAttribute('href')?r=e.getAttribute('href').replace('mailto:',''):r=e.textContent.trim())}console.log('Extracted data:',{firstName:o,lastName:a,email:r});return{firstName:o,lastName:a,email:r}}catch(e){console.error('Error extracting contact data:',e);return{firstName:'',lastName:'',email:''}}}const t=e();const n=new URL('https://api.leadconnectorhq.com/widget/form/rpBMjFJzdISFJTYMWgQV');t.firstName&&n.searchParams.append('first_name',t.firstName);t.lastName&&n.searchParams.append('last_name',t.lastName);t.email&&n.searchParams.append('email',t.email);const o=document.createElement('div');const s=`#ghl-form-popup-overlay{position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.7);z-index:9999;display:flex;justify-content:center;align-items:center;font-family:Arial,sans-serif}#ghl-form-popup-container{background:white;border-radius:8px;width:90%;max-width:800px;height:90%;max-height:800px;position:relative;box-shadow:0 4px 20px rgba(0,0,0,0.3);display:flex;flex-direction:column}#ghl-form-popup-header{padding:15px;border-bottom:1px solid #eee;display:flex;justify-content:space-between;align-items:center}#ghl-form-popup-title{font-size:18px;font-weight:bold;color:#333;margin:0}#ghl-form-popup-close{background:none;border:none;font-size:24px;cursor:pointer;color:#777}#ghl-form-iframe{flex:1;width:100%;border:none}`;o.innerHTML=`<div id=\"ghl-form-popup-overlay\"><style>${s}</style><div id=\"ghl-form-popup-container\"><div id=\"ghl-form-popup-header\"><h3 id=\"ghl-form-popup-title\">Create New Job</h3><button id=\"ghl-form-popup-close\" aria-label=\"Close\">&times;</button></div><iframe id=\"ghl-form-iframe\" src=\"${n.toString()}\" allow=\"geolocation\"></iframe></div></div>`;document.body.appendChild(o);document.getElementById('ghl-form-popup-close').addEventListener('click',function(){document.getElementById('ghl-form-popup-overlay').remove()});document.getElementById('ghl-form-popup-overlay').addEventListener('click',function(e){if(e.target===this)this.remove()})})();</code>
             </li>
         </ol>
     </div>
@@ -87,6 +97,10 @@
     
     <div class="note">
         <strong>Note:</strong> This bookmarklet will only work on GoHighLevel contact pages. It extracts the contact's name and email to pre-fill the job creation form.
+    </div>
+    
+    <div class="note">
+        <strong>Troubleshooting:</strong> If the bookmarklet doesn't work, try opening your browser's developer console (F12 or right-click → Inspect → Console) before clicking the bookmarklet. This will show diagnostic information that can help identify which contact information was found.
     </div>
     
     <div class="footer">
