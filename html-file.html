@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GHL Job Creator Bookmarklet</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            color: #333;
+        }
+        h1 {
+            color: #2c3e50;
+            margin-bottom: 30px;
+        }
+        .bookmarklet {
+            display: inline-block;
+            padding: 10px 20px;
+            background: #3498db;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            margin: 15px 0;
+            font-weight: bold;
+        }
+        .bookmarklet:hover {
+            background: #2980b9;
+        }
+        .instructions {
+            background: #f9f9f9;
+            border-left: 4px solid #3498db;
+            padding: 15px 20px;
+            margin: 20px 0;
+        }
+        ol {
+            margin-left: 20px;
+        }
+        .note {
+            background: #ffffdd;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 20px 0;
+        }
+        .footer {
+            margin-top: 50px;
+            padding-top: 20px;
+            border-top: 1px solid #eee;
+            font-size: 0.9em;
+            color: #777;
+        }
+    </style>
+</head>
+<body>
+    <h1>GHL Job Creator Bookmarklet</h1>
+    
+    <p>This tool allows you to create a new job directly from a contact's page in GoHighLevel, pre-filling the contact information automatically.</p>
+    
+    <div class="instructions">
+        <h2>Installation Instructions:</h2>
+        <ol>
+            <li>Make sure your browser's bookmarks bar is visible (View → Show Bookmarks Bar)</li>
+            <li>Drag this link to your bookmarks bar: 
+                <a class="bookmarklet" href="javascript:(function(){var s=document.createElement('script');s.src='https://REPLACE-WITH-YOUR-HOSTED-URL/ghl-bookmarklet.js';document.body.appendChild(s);})();">GHL Job Creator</a>
+            </li>
+            <li>If dragging doesn't work, right-click your bookmarks bar, select "Add page" and:
+                <ul>
+                    <li>Name: <strong>GHL Job Creator</strong></li>
+                    <li>URL: <code>javascript:(function(){var s=document.createElement('script');s.src='https://REPLACE-WITH-YOUR-HOSTED-URL/ghl-bookmarklet.js';document.body.appendChild(s);})();</code></li>
+                </ul>
+            </li>
+        </ol>
+    </div>
+    
+    <div class="instructions">
+        <h2>How to Use:</h2>
+        <ol>
+            <li>Navigate to any contact page in GoHighLevel</li>
+            <li>Click the "GHL Job Creator" bookmark in your bookmarks bar</li>
+            <li>The job creation form will appear with pre-filled contact information</li>
+            <li>Complete the form and submit</li>
+        </ol>
+    </div>
+    
+    <div class="note">
+        <strong>Note:</strong> This bookmarklet will only work on GoHighLevel contact pages. It extracts the contact's name and email to pre-fill the job creation form.
+    </div>
+    
+    <div class="footer">
+        <p>If you encounter any issues or have questions, please contact your administrator.</p>
+    </div>
+</body>
+</html>
